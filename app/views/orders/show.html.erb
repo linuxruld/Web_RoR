@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+	<%@order.line_items.each do |item|%>
+    <tr>
+<td><%= item.quantity %>&times;</td>
+<td><%= item.product.title %></td>
+<td class="item_price" ><%= number_to_currency(item.total_price) %></td>
+</tr>
+<%end%>
+	</p>
+
+<%= link_to 'Back', orders_path %>

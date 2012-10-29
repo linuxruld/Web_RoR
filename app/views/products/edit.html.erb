@@ -1,0 +1,10 @@
+<h1>Editing product</h1>
+
+<%= render 'form' %>
+
+<% if signed_in? %>  
+<%if current_user.admin?%>
+<%= link_to 'Show', @product %> |
+<%end%>
+<%end%>
+<%= link_to 'Back', products_path %>

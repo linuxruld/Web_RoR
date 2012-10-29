@@ -1,0 +1,4 @@
+<% if @user.admin?%>
+<h1>Admin</h1>
+<%end%>
+<%= @user.name %>, <%= @user.email %>
